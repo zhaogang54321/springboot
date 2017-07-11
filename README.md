@@ -5,3 +5,4 @@ spirngboot-ssm
 jdk版本为1.8
 分页用的是PageHelper帮助类
 数据库是MySQL5.6
+连接池用的是druid
