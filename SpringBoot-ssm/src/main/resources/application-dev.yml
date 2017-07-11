@@ -1,0 +1,32 @@
+server:
+  port: 9000
+  sessionTimeout: 30
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: root
+    sql-script-encoding: utf-8
+    
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  http:
+    encoding.charset: UTF-8  
+    encoding.enable: true  
+    encoding.force: true 
+  jps: 
+    showsql: true
+mybatis:
+  type-aliases-package: com.turing.manage.entity
+  #config-locations: classpath:mapper/mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml
+  
+banner:
+  charset: UTF-8
+  location: classpath:banner.txt
+
+logging:
+  config: classpath:logback.xml

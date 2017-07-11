@@ -1,0 +1,37 @@
+========================================================================================
+hello 大家好！我是图灵云教育〖赵刚〗
+                                                                                          
+████████╗██╗   ██╗██████╗ ██╗███╗   ██╗ ██████╗ ███████╗██████╗ ██╗   ██╗
+╚══██╔══╝██║   ██║██╔══██╗██║████╗  ██║██╔════╝ ██╔════╝██╔══██╗██║   ██║
+   ██║   ██║   ██║██████╔╝██║██╔██╗ ██║██║  ███╗█████╗  ██║  ██║██║   ██║
+   ██║   ██║   ██║██╔══██╗██║██║╚██╗██║██║   ██║██╔══╝  ██║  ██║██║   ██║
+   ██║   ╚██████╔╝██║  ██║██║██║ ╚████║╚██████╔╝███████╗██████╔╝╚██████╔╝
+   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═════╝  ╚═════╝ 
+                                                                         
+这个项目是Spring-boot加上mybatis开发的
+数据库在db目录内
+项目是用maven构建的，packaging已改为jar
+项目启动文件为com.turing.MainApplication.java,直接右键此java文件，选择Run As-->Java Application即可启动项目
+项目内嵌Tomcat8，固项目的构建里路径里不需要添加Server runtime项
+项目所用JDK版本为1.8
+项目的端口改为了9000，项目启动后，可直接在浏览器里输入localhost:9000即可
+项目用的注解：
+@Controller 注册控制层
+@MapperScan mapper文件所在包的扫描
+@SpringBootApplication 这个注解等价于@Configuration,@EnableAutoConfiguration和@ComponentScan三个注解
+	@Configuration 用来创建spring配置类，用来代替xml配置文件
+	@EnableAutoConfiguration 能够自动配置spring的上下文，试图猜测和配置你想要的bean类，通常会自动根据你的类路径和你的bean定义自动配置
+	@ComponentScan 会自动扫描指定包下的全部标有@Component的类，并注册成bean，当然包括@Component下的子注解@Service,@Repository,@Controller
+@RequestMapping 请求映射
+@GetMapping GET方式请求映射
+@PostMapping Post方式请求映射
+@PathVariable 获取请求路径中{}中的变量值
+@Autowired 自动注入
+@Service 注册模型层
+项目里用到的技术：
+	1，页面引用JSTL标签
+	2，pom里引入了spring-boot-devtools依赖，项目自动重新部署，不用重启服务器了。
+	3，用logback.xml配置 日志文件，并用日志打印SQL语句
+	4，使用pageHelper进行分页
+时间关系，暂时没加连接池，后续会添加上。
+========================================================================================
