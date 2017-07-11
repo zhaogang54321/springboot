@@ -3,4 +3,5 @@
 	JDK1.8
 	Mybatis持久层框架
 	pageHelper分页
+	druid连接池（web监控帐号：zhaogang，密码：zhaogang）
 	
