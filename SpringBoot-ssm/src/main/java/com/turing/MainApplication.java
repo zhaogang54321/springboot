@@ -11,6 +11,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,6 +33,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 //@ComponentScan(basePackages="com.ltzc.ccoc.user.service")
 @Controller
 @MapperScan("com.turing.manage.mapper")	//对mapper包的扫描
+@EnableTransactionManagement	//启用事务注解@Transactional
 public class MainApplication {
 
 	public static void main(String[] args) {
