@@ -115,7 +115,7 @@
 				<th>年龄</th>
 				<th>操作</th>
 			</tr>
-			<c:forEach var="t" items="${list }" varStatus="i">
+			<c:forEach var="t" items="${pageInfo.list }" varStatus="i">
 			<tr>
 				<td>${i.count }</td>
 				<td>${t.name }</td>

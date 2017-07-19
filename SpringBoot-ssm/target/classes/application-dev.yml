@@ -1,5 +1,5 @@
 server:
-  port: 9000
+  port: 80
   sessionTimeout: 30
 spring:
   datasource:
@@ -40,7 +40,7 @@ spring:
     encoding.charset: UTF-8  
     encoding.enable: true  
     encoding.force: true 
-  jps: 
+  jpa: 
     showsql: true
 mybatis:
   type-aliases-package: com.turing.manage.entity
@@ -53,3 +53,21 @@ banner:
 
 logging:
   config: classpath:logback.xml
+  
+jedis:
+  database: 0
+  host: 127.0.0.1
+  port: 6379
+  password: turingzhaogang_20160725
+  timeout: 1000
+  pool:
+    maxTotal: 600
+    maxWaitMillis: 1000
+    maxIdle: 300
+    minIdle: 0
+    testOnBorrow: true
+#redis初始化列表
+redis:
+  cacheList:
+    - student
+    - country
