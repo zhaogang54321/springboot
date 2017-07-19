@@ -14,7 +14,7 @@ hello 大家好！我是图灵云教育〖赵刚〗
 项目启动文件为com.turing.MainApplication.java,直接右键此java文件，选择Run As-->Java Application即可启动项目
 项目内嵌Tomcat8，固项目的构建里路径里不需要添加Server runtime项
 项目所用JDK版本为1.8
-项目的端口改为了9000，项目启动后，可直接在浏览器里输入localhost:9000即可
+项目的端口改为了80，项目启动后，可直接在浏览器里输入localhost即可
 项目用的注解：
 @Controller 注册控制层
 @MapperScan mapper文件所在包的扫描
@@ -34,4 +34,5 @@ hello 大家好！我是图灵云教育〖赵刚〗
 	3，用logback.xml配置 日志文件，并用日志打印SQL语句
 	4，使用pageHelper进行分页
 	5，druid连接池（web监控帐号：zhaogang，密码：zhaogang）
+	6，缓存用的是redis，实现了与数据库的完全同步
 ========================================================================================
